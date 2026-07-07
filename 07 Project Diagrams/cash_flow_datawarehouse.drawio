@@ -1,0 +1,90 @@
+<mxfile host="Electron">
+  <diagram name="Page-1" id="AnXiUUuJP8VqFF8GBlXw">
+    <mxGraphModel dx="1141" dy="716" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="qPpCIp2DuhUar8i36whm-22" edge="1" parent="1" source="qPpCIp2DuhUar8i36whm-10" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="qPpCIp2DuhUar8i36whm-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qPpCIp2DuhUar8i36whm-51" edge="1" parent="1" source="qPpCIp2DuhUar8i36whm-10" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="qPpCIp2DuhUar8i36whm-46">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qPpCIp2DuhUar8i36whm-52" edge="1" parent="1" source="qPpCIp2DuhUar8i36whm-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="qPpCIp2DuhUar8i36whm-29">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qPpCIp2DuhUar8i36whm-53" edge="1" parent="1" source="qPpCIp2DuhUar8i36whm-10" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="qPpCIp2DuhUar8i36whm-36">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qPpCIp2DuhUar8i36whm-10" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="Dim Date" vertex="1">
+          <mxGeometry height="110" width="120" x="665" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="qPpCIp2DuhUar8i36whm-11" parent="qPpCIp2DuhUar8i36whm-10" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;ul&gt;&lt;li&gt;date_key (PK)&amp;nbsp;&lt;/li&gt;&lt;li&gt;&amp;nbsp;date&amp;nbsp;&lt;/li&gt;&lt;li&gt;&amp;nbsp;month&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;year&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;" vertex="1">
+          <mxGeometry height="100" width="140" x="-20" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="qPpCIp2DuhUar8i36whm-55" edge="1" parent="1" source="qPpCIp2DuhUar8i36whm-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="qPpCIp2DuhUar8i36whm-20">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="810" y="590" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qPpCIp2DuhUar8i36whm-16" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="Dim Categories" vertex="1">
+          <mxGeometry height="80" width="140" x="880" y="535" as="geometry" />
+        </mxCell>
+        <mxCell id="qPpCIp2DuhUar8i36whm-17" parent="qPpCIp2DuhUar8i36whm-16" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;ul&gt;&lt;li&gt;category_key (PK)&lt;/li&gt;&lt;li&gt;category_name&lt;/li&gt;&lt;/ul&gt;" vertex="1">
+          <mxGeometry height="110" width="140" x="-10" as="geometry" />
+        </mxCell>
+        <mxCell id="qPpCIp2DuhUar8i36whm-54" edge="1" parent="1" source="qPpCIp2DuhUar8i36whm-18" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="qPpCIp2DuhUar8i36whm-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qPpCIp2DuhUar8i36whm-18" parent="1" style="swimlane;whiteSpace=wrap;html=1;startSize=23;" value="Dim_Accounts " vertex="1">
+          <mxGeometry height="80" width="140" x="440" y="535" as="geometry" />
+        </mxCell>
+        <mxCell id="qPpCIp2DuhUar8i36whm-19" parent="qPpCIp2DuhUar8i36whm-18" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;ul&gt;&lt;li&gt;Account_key (PK)&lt;/li&gt;&lt;li&gt;Account_name&lt;/li&gt;&lt;/ul&gt;" vertex="1">
+          <mxGeometry height="110" width="140" x="-10" as="geometry" />
+        </mxCell>
+        <mxCell id="qPpCIp2DuhUar8i36whm-20" parent="1" style="swimlane;whiteSpace=wrap;html=1;startSize=23;" value="fact_cash_transactions" vertex="1">
+          <mxGeometry height="170" width="170" x="640" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="qPpCIp2DuhUar8i36whm-21" parent="qPpCIp2DuhUar8i36whm-20" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;ul&gt;&lt;li&gt;transaction_id&amp;nbsp;&lt;/li&gt;&lt;li&gt;&amp;nbsp;date_key FK&amp;nbsp;&lt;/li&gt;&lt;li&gt;account_key FK&lt;/li&gt;&lt;li&gt;&amp;nbsp;category_key FK&amp;nbsp;&lt;/li&gt;&lt;li&gt;&amp;nbsp;amount&amp;nbsp;&lt;/li&gt;&lt;li&gt;signed_amount&amp;nbsp;&lt;/li&gt;&lt;li&gt;balance&amp;nbsp;&lt;/li&gt;&lt;li&gt;&amp;nbsp;description&amp;nbsp;&lt;/li&gt;&lt;li&gt;&amp;nbsp;type&amp;nbsp;&amp;nbsp;&lt;/li&gt;&lt;/ul&gt;" vertex="1">
+          <mxGeometry height="100" width="140" x="-5" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="qPpCIp2DuhUar8i36whm-29" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="fact_monthly_cashflow" vertex="1">
+          <mxGeometry height="185" width="180" x="335" y="282.5" as="geometry" />
+        </mxCell>
+        <mxCell id="qPpCIp2DuhUar8i36whm-31" parent="qPpCIp2DuhUar8i36whm-29" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;ul&gt;&lt;li&gt;&amp;nbsp;month_key &amp;nbsp;cash_revenue &amp;nbsp;total_expenses&amp;nbsp;&lt;/li&gt;&lt;li&gt;&amp;nbsp;net_cash_flow &amp;nbsp;payroll_pct&amp;nbsp;&lt;/li&gt;&lt;li&gt;&amp;nbsp;shortage_flag&amp;nbsp;&lt;/li&gt;&lt;li&gt;&amp;nbsp;shortage_severity&amp;nbsp;&lt;/li&gt;&lt;li&gt;&amp;nbsp;avg_3m_revenue&amp;nbsp;&lt;/li&gt;&lt;li&gt;&amp;nbsp;avg_3m_expenses&amp;nbsp;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;month_end_balance&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;" vertex="1">
+          <mxGeometry height="130" width="250" x="-20" y="35" as="geometry" />
+        </mxCell>
+        <mxCell id="qPpCIp2DuhUar8i36whm-43" edge="1" parent="1" source="qPpCIp2DuhUar8i36whm-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="qPpCIp2DuhUar8i36whm-36">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qPpCIp2DuhUar8i36whm-34" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="Dim Products" vertex="1">
+          <mxGeometry height="110" width="150" x="1140" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="qPpCIp2DuhUar8i36whm-35" parent="qPpCIp2DuhUar8i36whm-34" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;ul&gt;&lt;li&gt;product_key PK&amp;nbsp;&amp;nbsp;&lt;/li&gt;&lt;li&gt;product_id&amp;nbsp;&lt;/li&gt;&lt;li&gt;category&amp;nbsp;&amp;nbsp;&lt;/li&gt;&lt;li&gt;type&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;detail&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;" vertex="1">
+          <mxGeometry height="80" width="140" x="-10" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="qPpCIp2DuhUar8i36whm-36" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="Fact_sales" vertex="1">
+          <mxGeometry height="130" width="145" x="920" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="qPpCIp2DuhUar8i36whm-37" parent="qPpCIp2DuhUar8i36whm-36" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div&gt;&lt;ul&gt;&lt;li&gt;&amp;nbsp;transaction_id&amp;nbsp;&lt;/li&gt;&lt;li&gt;&amp;nbsp;date_key FK&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;/li&gt;&lt;li&gt;&amp;nbsp;product_key FK&amp;nbsp;&lt;/li&gt;&lt;li&gt;&amp;nbsp;revenue&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;/li&gt;&lt;li&gt;&amp;nbsp;quantity&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/li&gt;&lt;li&gt;&amp;nbsp;unit_price&amp;nbsp;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="155" x="-15" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="qPpCIp2DuhUar8i36whm-50" edge="1" parent="1" source="qPpCIp2DuhUar8i36whm-45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="qPpCIp2DuhUar8i36whm-46">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qPpCIp2DuhUar8i36whm-45" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="Dim Employee" vertex="1">
+          <mxGeometry height="90" width="130" x="430" y="135" as="geometry" />
+        </mxCell>
+        <mxCell id="qPpCIp2DuhUar8i36whm-47" parent="qPpCIp2DuhUar8i36whm-45" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div&gt;&lt;ul&gt;&lt;li&gt;employee_keyPK&amp;nbsp;&lt;/li&gt;&lt;li&gt;employee_name&lt;/li&gt;&lt;li&gt;role&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="-10" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="qPpCIp2DuhUar8i36whm-46" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="fact_payroll_monthly" vertex="1">
+          <mxGeometry height="120" width="195" x="625" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="qPpCIp2DuhUar8i36whm-48" parent="qPpCIp2DuhUar8i36whm-46" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div&gt;&lt;ul&gt;&lt;li&gt;employee_key FK&lt;/li&gt;&lt;li&gt;month_key&amp;nbsp;&lt;/li&gt;&lt;li&gt;total_paid&lt;/li&gt;&lt;li&gt;num_payments&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="75" width="160" x="10" y="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
