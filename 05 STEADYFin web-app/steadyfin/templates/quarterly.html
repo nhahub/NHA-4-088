@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}STEADYFin — Quarterly Performance{% endblock %}
+
+{% block content %}
+  <h1 class="page-heading">Quarterly Performance</h1>
+  <p class="page-subheading">Which quarter makes the most money, ranked.</p>
+
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Quarter</th><th>Total Revenue</th><th>Total Expenses</th><th>Net Cash Flow</th><th>Rank</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in rows|sort(attribute='revenue_rank') %}
+      <tr>
+        <td style="font-family: var(--font-display); font-weight:600;">{{ row.quarter_label }}</td>
+        <td>${{ "%.0f"|format(row.total_revenue) }}</td>
+        <td>${{ "%.0f"|format(row.total_expenses) }}</td>
+        <td>${{ "%.0f"|format(row.total_net_cash_flow) }}</td>
+        <td>
+          {% if row.revenue_rank == 1 %}<span class="badge badge--HEALTHY">#1 Best</span>
+          {% else %}#{{ row.revenue_rank }}{% endif %}
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

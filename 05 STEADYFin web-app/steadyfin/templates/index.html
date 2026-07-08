@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% block title %}STEADYFin — Dashboard{% endblock %}
+
+{% block content %}
+  <h1 class="page-heading">Cash Flow Overview</h1>
+  <p class="page-subheading">
+    {% if kpi %}Latest month: {{ kpi.month_key }}{% else %}No data loaded yet — check your Databricks connection.{% endif %}
+  </p>
+
+  {% if kpi %}
+  <div class="kpi-grid">
+    <div class="kpi-card">
+      <div class="kpi-card__label">Revenue</div>
+      <div class="kpi-card__value">${{ "%.1f"|format(kpi.revenue / 1000) }}K</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-card__label">Expenses</div>
+      <div class="kpi-card__value">${{ "%.1f"|format(kpi.expenses / 1000) }}K</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-card__label">Net Cash Flow</div>
+      <div class="kpi-card__value {% if kpi.net_cash_flow < 0 %}kpi-card__value--critical{% else %}kpi-card__value--good{% endif %}">
+        ${{ "%.1f"|format(kpi.net_cash_flow / 1000) }}K
+      </div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-card__label">Payroll % of Revenue</div>
+      <div class="kpi-card__value {% if kpi.payroll_pct_of_revenue and kpi.payroll_pct_of_revenue > 40 %}kpi-card__value--warn{% else %}kpi-card__value--good{% endif %}">
+        {{ kpi.payroll_pct_of_revenue }}%
+      </div>
+    </div>
+  </div>
+
+  {# ---- Signature element: cash reserve shown as a coffee cup fill level ---- #}
+  {% set runway = kpi.cash_runway_months or 0 %}
+  {% set fill_pct = [runway / 12 * 100, 100] | min %}
+  <div class="runway-panel">
+    <svg width="120" height="140" viewBox="0 0 120 140" role="img" aria-label="Cash runway gauge">
+      <defs>
+        <clipPath id="cupClip">
+          <path d="M28 30 L34 118 Q60 128 86 118 L92 30 Z" />
+        </clipPath>
+      </defs>
+      <!-- cup outline -->
+      <path d="M28 30 L34 118 Q60 128 86 118 L92 30 Z"
+            fill="var(--tan-panel)" stroke="var(--coffee-mid)" stroke-width="3" />
+      <!-- handle -->
+      <path d="M92 45 Q112 50 108 72 Q104 90 88 88"
+            fill="none" stroke="var(--coffee-mid)" stroke-width="3" />
+      <!-- fill level, clipped to cup interior -->
+      <rect x="20" y="{{ 118 - (88 * fill_pct / 100) }}" width="80" height="{{ 88 * fill_pct / 100 }}"
+            fill="var(--terracotta)" clip-path="url(#cupClip)" />
+      <!-- rim -->
+      <ellipse cx="60" cy="30" rx="32" ry="7" fill="var(--panel)" stroke="var(--coffee-mid)" stroke-width="3" />
+    </svg>
+    <div>
+      <div class="runway-gauge__label">Cash Runway</div>
+      <div class="runway-gauge__value">{{ "%.1f"|format(runway) }} months</div>
+      <p class="runway-gauge__note">
+        How long the business could keep paying its bills at the current balance if
+        revenue stopped today, based on the trailing 3-month average expenses.
+      </p>
+    </div>
+  </div>
+  {% endif %}
+
+  <div class="embed-panel">
+    <h2>Full Power BI Report</h2>
+    {% if powerbi_url %}
+      <iframe class="embed-frame" src="{{ powerbi_url }}" title="STEADYFin Power BI Dashboard" allowfullscreen></iframe>
+    {% else %}
+      <div class="embed-placeholder">
+        No Power BI embed URL configured yet. In Power BI Desktop: <strong>File → Publish to web</strong>,
+        copy the embed link, then set <code>POWERBI_EMBED_URL</code> in <code>app.yaml</code>.
+      </div>
+    {% endif %}
+  </div>
+{% endblock %}
