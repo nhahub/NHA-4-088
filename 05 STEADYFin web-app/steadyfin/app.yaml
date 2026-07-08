@@ -1,0 +1,13 @@
+command: ['gunicorn', '-w', '2', '-b', '0.0.0.0:8000', 'app:app']
+
+env:
+  # SQL warehouse connection - fill these with your actual values (see README).
+  # Prefer Databricks secrets over plain-text values for the token in production.
+  - name: 'DATABRICKS_SERVER_HOSTNAME'
+    value: ''
+  - name: 'DATABRICKS_HTTP_PATH'
+    value: ''
+  - name: 'DATABRICKS_TOKEN'
+    value: ''
+  - name: 'POWERBI_EMBED_URL'
+    value: ''
