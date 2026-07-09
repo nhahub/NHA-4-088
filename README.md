@@ -52,8 +52,6 @@ and a custom web application.
 <!-- Place the diagram exported from "07 Project Diagrams" here, e.g.:
 <img src=".07 Project Diagrams/project_pipeline.jpeg" alt="Medallion architecture diagram" width="800">
 -->
- <img src=".07 Project Diagrams/project_pipeline.jpeg" alt="Project Pipeline" width="160"> <br/>
-
 Raw CSVs (financial + POS)
         │
         ▼
