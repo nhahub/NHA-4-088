@@ -1,13 +1,19 @@
 <p align="center">
   <!-- SCREENSHOT: project logo -->
   <!-- Recommended: a square PNG, ~400x400px, placed at 08 Screenshots/logo.png -->
-  <img src="./08 Screenshots/steadyfin_logo.jpeg" alt="STEADYFin logo" width="160">
+  <img src="./08 Screenshots/steadyfin_logo.jpeg" alt="STEADYFin logo" width="300">
 </p>
 
 <h1 align="center">STEADYFin</h1>
 <p align="center"><b>Cash Flow Intelligence Pipeline for a Coffee Shop Business</b></p>
 <p align="center">Data Engineering Capstone Project — Databricks · Power BI · Flask</p>
-
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.11-blue">
+  <img src="https://img.shields.io/badge/Databricks-FF3621?logo=databricks&logoColor=white">
+  <img src="https://img.shields.io/badge/PowerBI-F2C811?logo=powerbi&logoColor=black">
+  <img src="https://img.shields.io/badge/Flask-000000?logo=flask&logoColor=white">
+  <img src="https://img.shields.io/badge/Delta_Lake-00ADD8">
+</p>
 ---
 
 ## Table of Contents
@@ -52,26 +58,13 @@ and a custom web application.
 <!-- Place the diagram exported from "07 Project Diagrams" here, e.g.:
 <img src=".07 Project Diagrams/project_pipeline.jpeg" alt="Medallion architecture diagram" width="800">
 -->
+## Architecture
 
-```
-Raw CSVs (financial + POS)
-        │
-        ▼
-   Bronze Layer      →  raw ingestion, no business logic
-        │
-        ▼
-   Silver Layer      →  cleaned types, standardized dates, deduplicated
-        │
-        ▼
-   Gold Layer        →  star schema (dims + facts), shortage detection
-        │
-        ├──────────────┐
-        ▼              ▼
-  AI Suggestions   Power BI / STEADYFin Website
-  (Gemini)          (dashboards + AI Insights page)
-```
- <img src=".07 Project Diagrams/project-pipeline.jpeg" alt="project_pipeline" width="800">
----
+The following diagram illustrates the complete STEADYFin data pipeline,
+starting from raw financial datasets through the Medallion Architecture,
+ending with both the Power BI dashboard and the Flask web application.
+
+<img src="./07 Project Diagrams/project-pipeline.jpeg" alt="STEADYFin Architecture" width="900">
 
 ## Repository Structure
 
@@ -124,17 +117,74 @@ Date range: January 2022 – December 2023.
 
 ### Power BI Dashboard
 <!-- one screenshot per report page: Executive Overview, Expense Deep-Dive, Sales & Products, AI Recommendations -->
+The Power BI dashboard provides a complete overview of the business's financial
+performance by combining operational, sales, payroll, and cash flow data from
+the Gold Layer. It enables business owners to monitor financial health,
+identify spending patterns, evaluate sales performance, and detect potential
+cash flow risks through interactive visualizations.
+
+The dashboard consists of five main report pages:
+### Executive Overview
+
 <img src="./08 Screenshots/Executive_overview.png" alt="Power BI Executive Overview page" width="800">
-<img src="./08 Screenshots/sales.png" alt="Power BI Sales page" width="800">
+
+*High-level KPIs, revenue, expenses, and cash flow summary. This page provides an overall view of the business's financial performance, including total revenue, expenses, net cash flow, account balance, and key operational metrics.*
+
+---
+
+### Sales Analysis
+
+<img src="./08 Screenshots/sales.png" alt="Power BI Sales Analysis page" width="800">
+
+*Analyzes sales performance through revenue trends, product categories, order volume, average order value, and hourly sales patterns to help identify customer purchasing behavior and top-performing products.*
+
+---
+
+### Business Health Monitor
+
 <img src="./08 Screenshots/bussniess_health_monitor.png" alt="Power BI Business Health Monitor page" width="800">
+
+*Monitors the overall financial health of the business by tracking cash flow status, shortage detection, healthy versus risky months, profitability indicators, and early warning signals.*
+
+---
+
+### Payroll & Expenses
+
 <img src="./08 Screenshots/payroll.png" alt="Power BI Payroll & Expenses page" width="800">
+
+*Provides a detailed breakdown of payroll, operating expenses, marketing, utilities, supplies, and credit card spending, helping identify the largest cost drivers within the business.*
+
+---
+
+### Financial Insights
+
 <img src="./08 Screenshots/financial_insights.png" alt="Power BI Financial Insights page" width="800">
 
+*Offers a detailed financial transaction analysis, allowing users to explore income and expenses by account, category, month, and year to better understand overall cash movement.*
+
 ### STEADYFin Website
-<!-- homepage with KPI cards + runway gauge, AI Insights page, Quarterly page -->
-<img src="./08 Screenshots/web_dashboard.png" alt="STEADYFin homepage" width="800">
-<img src="./08 Screenshots/ai_insights.png" alt="STEADYFin AI Insights page" width="800">
-<img src="./08 Screenshots/web_quarterly.png" alt="STEADYFin Quarterly page" width="800">
+While the Power BI dashboard focuses on business intelligence and interactive reporting, the STEADYFin web application offers a user-friendly platform that combines financial dashboards with AI-generated insights. It enables business owners to easily explore their financial status, monitor cash flow, and receive actionable recommendations through a responsive web interface.
+### Dashboard
+
+<img src="./08 Screenshots/web_dashboard.png" alt="STEADYFin Dashboard" width="800">
+
+*The homepage presents the most important business KPIs, including revenue, expenses, net cash flow, current balance, and financial health indicators, allowing users to quickly assess the overall performance of their business.*
+
+---
+
+### AI Insights
+
+<img src="./08 Screenshots/ai_insights.png" alt="STEADYFin AI Insights" width="800">
+
+*Displays AI-generated financial recommendations based on the detected cash flow status. The suggestions help business owners understand potential risks and provide actionable recommendations to improve financial stability.*
+
+---
+
+### Quarterly Analysis
+
+<img src="./08 Screenshots/web_quarterly.png" alt="STEADYFin Quarterly Analysis" width="800">
+
+*Provides a quarterly breakdown of business performance, allowing users to compare revenue, expenses, and cash flow trends across different quarters and identify seasonal patterns.*
 
 ---
 
@@ -247,7 +297,9 @@ running SQL Warehouse.
 
 ---
 ## Demo Link
-**https://drive.google.com/file/d/1AQx2FK0vY3UZXyu_qSd9vG9U2KChZSXf/view?usp=sharing**
+A full demonstration of the project is available below:
+
+🎥**https://drive.google.com/file/d/1AQx2FK0vY3UZXyu_qSd9vG9U2KChZSXf/view?usp=sharing**
 ## Team
 
 <!-- Add team member names and roles here -->
