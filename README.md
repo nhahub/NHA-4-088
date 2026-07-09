@@ -15,6 +15,7 @@
   <img src="https://img.shields.io/badge/Delta_Lake-00ADD8">
 </p>
 ---
+
 ## Table of Contents
 - [Overview](#overview)
 - [Architecture](#architecture)
