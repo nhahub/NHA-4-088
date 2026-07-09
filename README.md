@@ -52,7 +52,7 @@ and a custom web application.
 <!-- Place the diagram exported from "07 Project Diagrams" here, e.g.:
 <img src=".07 Project Diagrams/project_pipeline.jpeg" alt="Medallion architecture diagram" width="800">
 -->
- <img src=".07 Project Diagrams/project-pipeline.jpeg" alt="STEADYFin logo" width="800">
+
 ```
 Raw CSVs (financial + POS)
         │
@@ -70,7 +70,7 @@ Raw CSVs (financial + POS)
   AI Suggestions   Power BI / STEADYFin Website
   (Gemini)          (dashboards + AI Insights page)
 ```
-
+ <img src=".07 Project Diagrams/project-pipeline.jpeg" alt="project_pipeline" width="800">
 ---
 
 ## Repository Structure
