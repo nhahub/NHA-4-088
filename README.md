@@ -1,7 +1,7 @@
 <p align="center">
   <!-- SCREENSHOT: project logo -->
   <!-- Recommended: a square PNG, ~400x400px, placed at 08 Screenshots/logo.png -->
-  <img src="./08 Screenshots/project_logo.png" alt="STEADYFin logo" width="160">
+  <img src="./08 Screenshots/steadyfin_logo.png" alt="STEADYFin logo" width="160">
 </p>
 
 <h1 align="center">STEADYFin</h1>
@@ -227,7 +227,7 @@ running SQL Warehouse.
 
 ## Key Design Decisions
 
-- **Star schema, not a single mega-table.** 4 fact tables
+- **Galaxy schema, not a single mega-table.** 4 fact tables
   (`fact_transactions`, `fact_monthly_summary`, `fact_sales`,
   `fact_payroll`), each at its own grain, sharing conformed dimensions. See
   `02 Medallion Architecture/03 Gold_Layer` for the full reasoning.
