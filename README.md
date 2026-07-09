@@ -1,7 +1,7 @@
 <p align="center">
   <!-- SCREENSHOT: project logo -->
   <!-- Recommended: a square PNG, ~400x400px, placed at 08 Screenshots/logo.png -->
-  <img src="./08 Screenshots/steadyfin_logo.png" alt="STEADYFin logo" width="160">
+  <img src="./08 Screenshots/steadyfin_logo.jpeg" alt="STEADYFin logo" width="160">
 </p>
 
 <h1 align="center">STEADYFin</h1>
