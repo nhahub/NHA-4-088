@@ -246,12 +246,10 @@ running SQL Warehouse.
 
 ---
 
-## Team
+## Team Members
 
 <!-- Add team member names and roles here -->
-| Name | Role |
-|---|---|
-| Basmala | Project coordination, pipeline design, AI layer, website |
-| | |
-| | |
-| | |
+1.Basmala Samir 
+2.Evronia Romany 
+3.Malak Ibrahim 
+4.Asmaa Ashraf 
