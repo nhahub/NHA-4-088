@@ -23,7 +23,6 @@
   - [3. Power BI Dashboard](#3-power-bi-dashboard)
   - [4. STEADYFin Website](#4-steadyfin-website)
 - [Key Design Decisions](#key-design-decisions)
-- [Known Data Limitations](#known-data-limitations)
 - [Team](#team)
 
 ---
@@ -120,20 +119,21 @@ Date range: January 2022 – December 2023.
 
 ### Databricks Pipeline
 <!-- e.g. workspace view of the 4 notebooks, a successful run, the Gold tables in the catalog -->
-<img src="./08 Screenshots/databricks_pipeline.png" alt="Databricks pipeline notebooks" width="800">
+<img src="./08 Screenshots/databricks_arch.png" alt="Databricks pipeline notebooks" width="800">
 
 ### Power BI Dashboard
 <!-- one screenshot per report page: Executive Overview, Expense Deep-Dive, Sales & Products, AI Recommendations -->
-<img src="./08 Screenshots/powerbi_executive_overview.png" alt="Power BI Executive Overview page" width="800">
-<img src="./08 Screenshots/powerbi_expense_deep_dive.png" alt="Power BI Expense Deep-Dive page" width="800">
-<img src="./08 Screenshots/powerbi_sales_products.png" alt="Power BI Sales & Products page" width="800">
-<img src="./08 Screenshots/powerbi_ai_recommendations.png" alt="Power BI AI Recommendations page" width="800">
+<img src="./08 Screenshots/Executive_overview.png" alt="Power BI Executive Overview page" width="800">
+<img src="./08 Screenshots/Sales.png" alt="Power BI Sales page" width="800">
+<img src="./08 Screenshots/bussniess_health_monitor.png" alt="Power BI Business Health Monitor page" width="800">
+<img src="./08 Screenshots/payroll.png" alt="Power BI Payroll & Expenses page" width="800">
+<img src="./08 Screenshots/financial_insights.png" alt="Power BI Financial Insights page" width="800">
 
 ### STEADYFin Website
 <!-- homepage with KPI cards + runway gauge, AI Insights page, Quarterly page -->
-<img src="./08 Screenshots/website_home.png" alt="STEADYFin homepage" width="800">
-<img src="./08 Screenshots/website_ai_insights.png" alt="STEADYFin AI Insights page" width="800">
-<img src="./08 Screenshots/website_quarterly.png" alt="STEADYFin Quarterly page" width="800">
+<img src="./08 Screenshots/web_dashboard.png" alt="STEADYFin homepage" width="800">
+<img src="./08 Screenshots/ai_insights.png" alt="STEADYFin AI Insights page" width="800">
+<img src="./08 Screenshots/web_quarterly.png" alt="STEADYFin Quarterly page" width="800">
 
 ---
 
@@ -243,30 +243,6 @@ running SQL Warehouse.
   from a Delta table populated by the `03 AI Suggestions` notebook, rather
   than calling an AI API on every page load — faster, cheaper, and the
   recommendations stay consistent between the website and Power BI.
-
----
-
-## Known Data Limitations
-
-Documented deliberately, not hidden — an academic project should surface
-these rather than gloss over them:
-
-- **Synthetic 2022 sales data.** `coffee_sales_2years` for 2022 was
-  synthetically generated to align with the financial dataset's date range,
-  calibrated against an empirically derived ~2.9x ratio between POS gross
-  revenue and net bank deposits.
-- **POS revenue vs. bank revenue mismatch (expected).** POS gross revenue is
-  consistently ~2.9x larger than the corresponding bank deposit — this is
-  normal (payment-processor fees), not a data error, and is documented
-  wherever both figures appear together.
-- **Payroll reconciliation gap.** `checking_account_secondary` (payroll
-  transfers) and `gusto_payroll` (employee-level payroll) do not reconcile
-  (~39% gap) — treated as a genuine data-quality limitation of the source
-  files, not a pipeline bug. `gusto_payroll` is used as the source of truth
-  since it has the employee-level detail the other file lacks.
-- **Missing January 2022 payroll.** `gusto_payroll` begins in February 2022;
-  flagged explicitly rather than silently producing a misleadingly high net
-  cash flow for that month.
 
 ---
 
