@@ -14,8 +14,6 @@
   <img src="https://img.shields.io/badge/Flask-000000?logo=flask&logoColor=white">
   <img src="https://img.shields.io/badge/Delta_Lake-00ADD8">
 </p>
----
-
 ## Table of Contents
 - [Overview](#overview)
 - [Architecture](#architecture)
