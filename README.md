@@ -124,7 +124,7 @@ Date range: January 2022 – December 2023.
 ### Power BI Dashboard
 <!-- one screenshot per report page: Executive Overview, Expense Deep-Dive, Sales & Products, AI Recommendations -->
 <img src="./08 Screenshots/Executive_overview.png" alt="Power BI Executive Overview page" width="800">
-<img src="./08 Screenshots/Sales.png" alt="Power BI Sales page" width="800">
+<img src="./08 Screenshots/sales.png" alt="Power BI Sales page" width="800">
 <img src="./08 Screenshots/bussniess_health_monitor.png" alt="Power BI Business Health Monitor page" width="800">
 <img src="./08 Screenshots/payroll.png" alt="Power BI Payroll & Expenses page" width="800">
 <img src="./08 Screenshots/financial_insights.png" alt="Power BI Financial Insights page" width="800">
