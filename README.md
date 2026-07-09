@@ -249,7 +249,7 @@ running SQL Warehouse.
 ## Team Members
 
 <!-- Add team member names and roles here -->
-1.Basmala Samir 
-2.Evronia Romany 
-3.Malak Ibrahim 
+1.Basmala Samir <br/>
+2.Evronia Romany <br/>
+3.Malak Ibrahim <br/>
 4.Asmaa Ashraf 
