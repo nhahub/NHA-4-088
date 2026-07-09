@@ -23,6 +23,7 @@
   - [3. Power BI Dashboard](#3-power-bi-dashboard)
   - [4. STEADYFin Website](#4-steadyfin-website)
 - [Key Design Decisions](#key-design-decisions)
+- [Demo Link](#demo-link)
 - [Team](#team)
 
 ---
@@ -49,7 +50,7 @@ and a custom web application.
 
 <!-- SCREENSHOT: architecture / medallion diagram -->
 <!-- Place the diagram exported from "07 Project Diagrams" here, e.g.:
-<img src="./07 Project Diagrams/project_pipeline.png" alt="Medallion architecture diagram" width="800">
+<img src="./07 Project Diagrams/project_pipeline.jpeg" alt="Medallion architecture diagram" width="800">
 -->
 
 ```
@@ -245,8 +246,9 @@ running SQL Warehouse.
   recommendations stay consistent between the website and Power BI.
 
 ---
-
-## Team Members
+## demo-link
+****
+## Team
 
 <!-- Add team member names and roles here -->
 1.Basmala Samir <br/>
